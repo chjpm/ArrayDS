@@ -10,6 +10,13 @@ namespace Intro
     {
         static void Main(string[] args)
         {
+            //ArrayIntro();
+            OneDArray();
+        }
+
+        public static void ArrayIntro()
+        {
+            #region [Array intro]
             //declaration of an array
             int[] intArray;
 
@@ -32,7 +39,7 @@ namespace Intro
             Console.WriteLine("For loop: ");
             for (int i = 0; i < intArray.Length; i++)
             {
-                Console.WriteLine(" " + intArray[i] );
+                Console.WriteLine(" " + intArray[i]);
             }
 
             //Using foreach loop
@@ -63,6 +70,23 @@ namespace Intro
                 k++;
             } while (k < intArray.Length);
 
+            Console.ReadLine();
+            #endregion
+        }
+
+        public static void OneDArray()
+        {
+            //declaring 1D array
+            string[] weekdays;
+
+            //Allocating memory
+            weekdays = new string[] { "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
+
+            //Fetching array data
+            foreach (string day in weekdays)
+            {
+                Console.WriteLine(day + " ");
+            }
             Console.ReadLine();
         }
     }
